@@ -8,37 +8,50 @@
     <title>M-franklin</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="fm.ico">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body class="min-h-screen font-serif bg-gradient-to-r from-sky-500 to-indigo-500 text-white dark:bg-gray-900">
-    <header class="top-0 sticky bg-zinc-800 text-2xl sm:text-4xl z-10 text-center">
+    <header class="top-0 sticky bg-zinc-800 text-white z-10">
         <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
-            <div>
-                <button id="sidebar" class="text-3xl sm:hidden cursor-pointer">
-                    &#9776;
-                </button>
-                <button >
-                    Ⓜ
-                </button>
-            </div>
-            <div>
-            <h1 class="py-1 text-nowrap sm:mx-auto w-auto sm:w-full sm:text-center">
-            <a href="#touch">Who is <span class="text-purple-600 text-nowrap"> Franklin Muriithi Kinyua?</span></a>
+            <h1 class=" text-3xl font-medium">
+                <a href="#touch">Who is <span class="text-purple-600 text-nowrap"> Franklin Muriithi Kinyua?</span></a>
             </h1>
+            <div>
+                <!-- <button id="sidebar" class="text-3xl sm:hidden cursor-pointer">
+                    &#9776;
+                </button> -->
+                <button class="inline-flex sm:animate-none">
+                    <img id="sidebar" class=" sm:hidden rounded-full w-10 h-10" src="img/growing.jpg" alt="Ⓜ">
+                </button>
+
+                <nav class="hidden sm:block  space-x-8 text-xl">
+                    <a class="hover:translate-y-1" href="#about">About</a>
+                    <a class="hover:translate-y-1" href="#hobbies">Hobbies</a>
+                    <a class="hover:translate-y-1" href="#projects">Projects</a>
+                    <a class="hover:translate-y-1" href="#contact">Contact</a>
+                </nav>
             </div>
+         </section>
+
+        <section id="sidemenu" class="absolute top-0 bg-green-300 w-3/4 text-5xl flex-col justify-center origin-left animate-opem-menu hidden">
+            <button class="text-5xl self-end px-6 py-3">
+                &times;
+            </button>
+            <nav class="flex flex-col bg-slate-500 w-full min-h-screen py-8" aria-label="mobile">
+                     <a class="w-full text-center py-6 hover:translate-y-1" href="#about">About</a>
+                    <a class="w-full text-center py-6 hover:translate-y-1" href="#hobbies">Hobbies</a>
+                    <a class="w-full text-center py-6 hover:translate-y-1" href="#projects">Projects</a>
+                    <a class="w-full text-center py-6 hover:translate-y-1" href="#contact">Contact</a>
+              </nav>
         </section>
         <section>
-        <nav class="hidden sm:flex sm:flex-row justify-evenly py-0.5 bg-slate-500 w-full">
-            <a class="hover:translate-y-1" href="#about">About</a>
-            <a class="hover:translate-y-1" href="#hobbies">Hobbies</a>
-            <a class="hover:translate-y-1" href="#projects">Mini-Projects</a>
-            <a class="hover:translate-y-1" href="#contact">Contact</a>
-          </nav>
+       
         </section>
     </header>
 
-    <main class="mx-auto max-w-10xl">
-        <section id="touch" class="mb-12 flex flex-col scroll-mt-40 items-center justify-center  gap-4 p-6 lg:flex-row">
+    <main class="mx-auto max-w-8xl">
+        <section id="touch" class="min-h-screen mb-12 flex flex-col scroll-mt-40 items-center justify-center  gap-4 p-6 lg:flex-row">
         <article class="max-w-md text-center text-4xl font-bold dark:text-white sm:text-left sm:text-5xl"
         > 
         <h2 class="pb-8 text-orange-200">Inroduction:</h2>
@@ -72,62 +85,59 @@
 
             <article >
                 <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Memories</h2>
+                
                 <ul class="mx-auto my-10 flex flex-col items-center gap-8 sm:flex-row">
-                    <li class="flex w-2/3 flex-col items-center rounded-3xl border border-double border-black py-5 px-2 shadow-xl dark:border-white dark:bg-black sm:w-5/6">
-                        <img src="img/Birth.jpg" alt="Me at birth" class="mb-6 w-1/2 h-1/2 rounded-xl">
-                        <p >2 Months old Me & my cousin</p>
+                    <li class="flex-1 flex flex-col items-center rounded-3xl border border-double border-black py-5 px-2 shadow-xl dark:border-white dark:bg-black sm:w-2/3">
+                        <img src="img/Birth.jpg" alt="Me at birth" class="mb-6 w-1/2 h-auto rounded-xl">
+                        <p>2 Months old Me & my cousin</p>
                     </li>
-                    <li class="flex w-2/3 flex-col items-center rounded-3xl border border-double border-black py-5 px-2 shadow-xl dark:border-white dark:bg-black sm:w-5/6 ">
-                        <img src="img/school.jpg" alt="Me at school" class="mb-6 w-1/2 rounded-xl">
+                    <li class="flex-1 flex flex-col items-center rounded-3xl border border-double border-black py-5 px-2 shadow-xl dark:border-white dark:bg-black sm:w-2/3">
+                        <img src="img/school.jpg" alt="Me at school" class="mb-6 w-1/2 h-auto rounded-xl">
                         <p>Graduation to move to class 1</p>
                     </li>
-                    <li class="flex w-2/3 flex-col items-center rounded-3xl border border-double border-black py-5 px-2 shadow-xl dark:border-white dark:bg-black sm:w-5/6">
-                        <img src="img/growing.jpg" alt="Growth" class="mb-6 w-1/2 rounded-xl">
-                        <P>Some shots</P>
+                    <li class="flex-1 flex flex-col items-center rounded-3xl border border-double border-black py-5 px-2 shadow-xl dark:border-white dark:bg-black sm:w-2/3">
+                        <img src="img/growing.jpg" alt="Growth" class="mb-6 w-1/2 h-auto rounded-xl">
+                        <p>Some shots</p>
                     </li>
                 </ul>
-            </article>
-
-            <H3 id="hobbies" class="text-slate-900 dark:text-white underline text-2xl text-center text-nowrap mt-4">Hobbies, Interests & Skills</H3>
-
-            <article  class="mx-auto my-10 flex flex-col items-center gap-8 sm:flex-row justify-evenly">
-                <figure class="my-12">
-                    <blockquote
-                    class="text-center static rounded-3xl bg-teal-600 py-12 px-8 dark:bg-purple-950 hover:-translate-y-1 size-7"
-                    >
-                        <ol>
-                            <li>Drawing</li>
-                            <li>Cooking</li>
-                            <li>Watching films</li>
-                            <li>Listening to music</li>
-                        </ol>
-                    </blockquote>
-                    <figcaption
-                    class="mt-2 text-center text-xl italic text-black dark:text-white sm:text-2xl"
-                    >
-                    Hobbies & Interest
-                    </figcaption>
-                </figure>
                 
-                <figure class="my-12 ">
-                    <blockquote
-                    class=" text-center static rounded-3xl bg-teal-600 py-12 px-8 dark:bg-purple-950 flex-shrink hover:-translate-y-1 size-7"
-                    >
-                        <ol>
-                            <li>Interpersonal-Relations</li>
-                            <li>Team Management</li>
-                            <li>Critaical Thinking</li>
-                            <li>Armature Deejaying</li>
-                        </ol>
-                    </blockquote>
-                    <figcaption
-                    class="mt-2 text-center text-xl italic text-black dark:text-white sm:text-2xl"
-                    >
+            </article>
+         </section>
+         
+         <H3 id="hobbies" class="text-slate-900 dark:text-white underline text-2xl text-center text-nowrap my-4">Hobbies, Interests & Skills</H3>
+
+         <section class="mx-auto my-10 flex flex-col items-center gap-8 sm:flex-row justify-evenly">
+            <figure class="my-12">
+                <blockquote class="content-center text-center static rounded-3xl bg-teal-600 py-12 px-8 dark:bg-purple-950 hover:-translate-y-1 size-64">
+                    <ol>
+                        <li>Drawing</li>
+                        <li>Cooking</li>
+                        <li>Watching films</li>
+                        <li>Listening to music</li>
+                    </ol>
+                </blockquote>
+                <figcaption class="mt-2 text-center text-xl italic text-black dark:text-white sm:text-2xl">
+                    Hobbies & Interest
+                </figcaption>
+            </figure>
+        
+            <figure class="my-12">
+                <blockquote class="content-center text-center static rounded-3xl bg-teal-600 py-12 px-8 dark:bg-purple-950 hover:-translate-y-1 size-64">
+                    <ol>
+                        <li>Interpersonal-Relations</li>
+                        <li>Team Management</li>
+                        <li>Critical Thinking</li>
+                        <li>Amateur Deejaying</li>
+                    </ol>
+                </blockquote>
+                <figcaption class="mt-2 text-center text-xl italic text-black dark:text-white sm:text-2xl">
                     Skills
-                    </figcaption>
-                </figure>
-             </article>
+                </figcaption>
+            </figure>
         </section>
+        
+
+        
 
         <section id="projects" class="border-t-4 border-dashed border-green-950 mx-auto w-4/5 m-4xl items-center text-center">
             <h2 class="text-xl lg:text-3xl mt-6 mb-4">Mini-Projects:</h2>
@@ -183,13 +193,13 @@
 
         <hr class="w-1/2 mx-auto">
 
-        <section id="contact" class="bg-orange-100 m-3 mx-6 border border-solid border-black rounded-xl px-6 py-6">
+        <section id="contact" class="bg-gray-500 m-3 mt-8 mx-6 border border-solid border-black rounded-xl px-6 py-6 max-h-screen">
 
             <h2 class="text-center text-2xl text-blue-700 mb-4">
                 Let's Get In Touch
             </h2>
 
-            <form class="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl" action="http://httpbin.org/get" method="get">
+            <form class="items-left mx-auto flex max-w-2xl flex-col gap-4 text-2xl sm:text-3xl" action="http://httpbin.org/get" method="get">
                 <p>
                     <label class="text-gray-950" for="name">Enter full name:</label>
                     <input class=" text-0.25xl rounded-xl p-3 w-full text-slate-500" type="text" placeholder="Eg. Florence Mukami" required id="name">
